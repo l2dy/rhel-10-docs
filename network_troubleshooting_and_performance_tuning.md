@@ -8,7 +8,7 @@ Red Hat Enterprise Linux 10
 
 Red Hat Customer Content Services
 
-[Legal Notice](#idm140339773078512)
+[Legal Notice](#idm140446735694096)
 
 **Abstract**
 
@@ -595,7 +595,7 @@ If `softirqd` processes could not retrieve all packets from interfaces in one NA
    The relevant columns are:
    
    - First column: The total number of received frames.
-   - Third column: The number times `softirqd` processes that could not retrieve all packets from interfaces in one NAPI polling cycle.
+   - Third column: The number of times `softirqd` processes that could not retrieve all packets from interfaces in one NAPI polling cycle.
    - Last column: The CPU core number.
 2. If the counters in the third column of the `/proc/net/softnet_stat` file increment over time, tune the system:
    
@@ -1839,7 +1839,7 @@ Red Hat Enterprise Linux provides a code example of how to use the `SO_REUSEPO
 
 For hosts with a multi-queue network interface controller (NIC), Transmit Packet Steering (XPS) distributes outgoing packet processing across multiple queues. This enables multiple CPUs to handle traffic, preventing transmit queue lock contention and packet drops.
 
-Certain drivers, such as `ixgbe`, `i40e`, and `mlx5` automatically configure XPS. To identify if the driver supports this capability, consult the documentation of your NIC driver. Consult your NIC driver’s documentation to identify if the driver supports this capability. If the driver does not support XPS auto-tuning, you can manually assign CPU cores to the transmit queues.
+Certain drivers, such as `ixgbe`, `i40e`, and `mlx5` automatically configure XPS. To identify if the driver supports this capability, consult the documentation of your NIC driver. If the driver does not support XPS auto-tuning, you can manually assign CPU cores to the transmit queues.
 
 Note
 
@@ -2329,14 +2329,14 @@ If you permanently enable or disable an offload feature, NetworkManager ensures 
    ```
    nmcli connection show
    NAME     UUID                                  TYPE      DEVICE
-   Example  a5eb6490-cc20-3668-81f8-0314a27f3f75  ethernet  enp1ss0
+   Example  a5eb6490-cc20-3668-81f8-0314a27f3f75  ethernet  enp1s0
    ...
    ```
    
    ```plaintext
    # nmcli connection show
    NAME     UUID                                  TYPE      DEVICE
-   Example  a5eb6490-cc20-3668-81f8-0314a27f3f75  ethernet  enp1ss0
+   Example  a5eb6490-cc20-3668-81f8-0314a27f3f75  ethernet  enp1s0
    ...
    ```
 2. Permanently change the state of the offload feature:
@@ -2999,7 +2999,7 @@ You cannot use the `network` RHEL system role to update only specific values in 
    
    Sets the number of RX frames.
    
-   `gso: <value>`
+   `tx_frames: <value>`
    
    Sets the number of TX frames.
    
@@ -3632,7 +3632,7 @@ You can use the `levels` and `domains` parameters to manage the debugging for Ne
 
 Note that subsequent levels log all messages from earlier levels. For example, setting the log level to `INFO` also logs messages contained in the `ERR` and `WARN` log level.
 
-<h2 id="idm140339773078512">Legal Notice</h2>
+<h2 id="idm140446735694096">Legal Notice</h2>
 
 Copyright © Red Hat.
 

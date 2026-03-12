@@ -8,7 +8,7 @@ Red Hat Enterprise Linux 10
 
 Red Hat Customer Content Services
 
-[Legal Notice](#idm140202113317408)
+[Legal Notice](#idm139672888225520)
 
 **Abstract**
 
@@ -17754,7 +17754,7 @@ It is possible to have more than one subnet manager. In that case, one acts as a
 
 Red Hat Enterprise Linux provides `OpenSM`, an implementation of an InfiniBand subnet manager. However, the features of `OpenSM` are limited and there is no active upstream development. Typically, embedded subnet managers in InfiniBand switches provide more features and support up-to-date InfiniBand hardware. For further details, see [Installing and configuring the OpenSM InfiniBand subnet manager](https://access.redhat.com/articles/7087953).
 
-<h2 id="idm140202113317408">Legal Notice</h2>
+<h2 id="idm139672888225520">Legal Notice</h2>
 
 Copyright © Red Hat.
 
